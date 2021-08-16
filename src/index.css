@@ -1,13 +1,64 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --primary-color: #00adb5;
+  --secondary-color: #303841;
+  --danger-color: #ff5722;
+  --light-color: #eeeeee;
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+}
+
+.danger-bg {
+  background-color: var(--danger-color);
+}
+
+.light-bg {
+  background-color: var(--light-color);
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.transparent-bg {
+  background-color: transparent;
+}
+
+.color-primary {
+  color: var(--primary-color);
+}
+
+.color-secondary {
+  color: var(--secondary-color);
+}
+
+.color-danger {
+  color: var(--danger-color);
+}
+
+.color-light {
+  color: var(--light-color);
+}
+
+.color-white {
+  color: white;
+}
+
+.color-dark {
+  color: black;
 }
