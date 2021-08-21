@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { fetchDictionary } from "../../redux/dictionarySlice";
 import { Form, Input, PrimaryButton } from "../CommonComponents.element";
 import { Wrapper, WrapperTitle } from "./InputWrapper.element";
 
-const InputWrapper = ({ title, placeholder, padding, background }) => {
+const InputWrapper = ({ title, placeholder, padding }) => {
   const [word, setWord] = useState("");
   const [idiom, setIdiom] = useState("");
 
@@ -16,6 +16,8 @@ const InputWrapper = ({ title, placeholder, padding, background }) => {
 
   const dispatch = useDispatch();
   const history = useHistory();
+  const dictionary = useSelector((state) => state.dictionary.dictionary);
+  console.log(dictionary);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,11 +33,9 @@ const InputWrapper = ({ title, placeholder, padding, background }) => {
     console.log(sendData);
 
     dispatch(fetchDictionary(sendData));
-    history.push("/result");
-
-
+    history.push(`/result/${searchTerm}`);
   };
-  
+
   return (
     <Wrapper className={padding}>
       <div className="container">

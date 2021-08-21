@@ -27,8 +27,8 @@ const SearchResults = () => {
           <i className="bi bi-arrow-left"></i> Ana sayfaya dön
         </a>
         <Results>
-          {dictionaryResult.map((item) =>
-            item.map((result) => (
+          {dictionaryResult?.map((item) =>
+            item?.map((result) => (
               <>
                 <h3 key={result.madde_id} className="color-secondary">{result.madde}</h3>
                 <ResultList key={Math.random()}>
